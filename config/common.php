@@ -1,0 +1,32 @@
+<?php
+
+return array(
+    'routers' => array(
+        '/'              => array('index',    'index'),
+        'GET /login'     => array('user',     'loginView'),
+        'POST /login'    => array('user',     'login'),
+        'GET /register'  => array('user',     'registerView'),
+        'POST /register' => array('user',     'register'),
+        '/my/buy'        => array('post',     'listUserBuy'),
+        '/my/sell'       => array('post',     'listUserSell'),
+        '/my/history'    => array('trade',    'listUser'),
+        '/my/cny'        => array('account', 'listCnyUser'),
+        '/my/btc'        => array('account', 'listBtcUser'),
+        'GET /push/cny'  => array('account', 'pushCnyView'),
+        'POST /push/cny' => array('account', 'pushCny'),
+        'GET /pull/cny'  => array('account', 'pullCnyView'),
+        'POST /pull/cny' => array('account', 'pullCny'),
+        'GET /push/btc'  => array('account', 'pushBtcView'),
+        'POST /push/btc' => array('account', 'pushBtc'),
+        'GET /pull/btc'  => array('account', 'pullBtcView'),
+        'POST /pull/btc' => array('account', 'pullBtc'),
+        '/my/btc'        => array('account', 'listBtcUser'),
+        'GET /sell'      => array('post',    'addSellView'),
+        'POST /sell'     => array('post',    'addSell'),
+        'GET /buy'       => array('post',    'addBuyView'),
+        'POST /buy'      => array('post',    'addBuy'),
+        'GET /recharge'  => array('trade',    'rechargeView'),
+        'POST /recharge' => array('trade',    'recharge'),
+        '/btc_test'      => array('trade',    'btc_test'),
+    ),
+);
